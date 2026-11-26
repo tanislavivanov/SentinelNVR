@@ -150,9 +150,48 @@ Change retention or segment length in `/etc/homecam/env`, then `systemctl restar
 - `deploy/` `install.sh`, go2rtc config, `recorder.sh`, `retention.sh`, systemd units, Proxmox hookscript
 - `NOTES.md` findings from probing the original camera, `DESIGN.md` architecture
 
-## Contributing
+## What's next / Timeline
 
-Issues and pull requests are welcome, especially reports of other cameras that work (or don't), so the list can grow.
+SentinelNVR is actively developed and still young. This is the rough plan. It is a direction, not a promise, and
+priorities will shift based on what people actually need.
+
+**Now: getting it ready for everyone**
+- Open-source release, cleaned of personal setup details
+- Beginner-friendly docs and a clearer install guide
+- Choosing a license
+
+**Next: easier setup**
+- One-command install with a guided first-run wizard (camera IP, password, storage, timezone)
+- Camera auto-discovery (ONVIF) and a built-in "test my camera" check
+- Docker / Docker Compose image, so Proxmox and Debian are no longer required
+- ARM support (Raspberry Pi and similar)
+- Rename the internal `homecam` service names to `sentinelnvr`
+
+**Later: new features**
+- Multiple cameras in one dashboard
+- Push notifications (people, animals, unknown faces)
+- Home Assistant and MQTT integration
+- Configurable motion zones and schedules
+- Optional hardware acceleration for detection
+- Multiple user accounts
+
+**Always: quality**
+- Performance work (lower CPU and memory, faster timeline and thumbnails)
+- Bug fixes and hardening, especially around recorder reliability and security
+- Tests and a proper CI pipeline
+- Support for more camera brands and models
+
+## Contributing: you are very welcome here
+
+Contributions of every size are wanted and appreciated. You don't need to be an expert.
+
+- **Open an issue** for bugs, questions, feature ideas, or "this is confusing in the README". All of it helps.
+- **Open a pull request** for fixes, features, docs or translations. For anything big, opening an issue first to
+  talk it through is a nice way to avoid wasted work, but small PRs can just be sent.
+- **Report your camera**: tell us the brand/model and whether it worked. That helps everyone with the same camera.
+- **Share feedback** on the setup experience. Where you got stuck is exactly what gets improved next.
+
+Please never post real passwords, public IPs or camera footage in issues.
 
 ## License
 
