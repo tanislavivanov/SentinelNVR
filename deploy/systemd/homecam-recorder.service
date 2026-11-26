@@ -1,0 +1,13 @@
+[Unit]
+Description=SentinelNVR recorder (ffmpeg -> NAS)
+After=go2rtc.service
+Wants=go2rtc.service
+[Service]
+User=homecam
+EnvironmentFile=/etc/homecam/env
+ExecStartPre=/bin/sleep 3
+ExecStart=/opt/homecam/recorder.sh
+Restart=always
+RestartSec=5
+[Install]
+WantedBy=multi-user.target

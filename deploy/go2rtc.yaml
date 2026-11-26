@@ -1,0 +1,15 @@
+# go2rtc config for the camera at 192.168.1.50 (RTSP + ONVIF, no auth - keep it firewalled!)
+api:
+  listen: "127.0.0.1:1984"     # only the SentinelNVR backend (login-protected proxy) talks to this
+rtsp:
+  listen: "127.0.0.1:8554"     # recorder reads from here, so the camera sees ONE connection
+webrtc:
+  listen: ":8555"
+
+streams:
+  homecam:                      # main: H.265 + PCMA audio
+    - rtsp://192.168.1.50:554/0/av0
+  homecam_sub:                  # sub stream
+    - rtsp://192.168.1.50:554/0/av1
+  homecam_h264:                 # on-demand transcode for browsers without H.265 (only runs while watched)
+    - ffmpeg:homecam#video=h264#audio=aac
