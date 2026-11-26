@@ -1,0 +1,14 @@
+[Unit]
+Description=SentinelNVR backend (PWA, PTZ, recordings)
+After=network-online.target go2rtc.service
+[Service]
+User=homecam
+EnvironmentFile=/etc/homecam/env
+WorkingDirectory=/opt/homecam/app
+CacheDirectory=homecam
+StateDirectory=homecam
+ExecStart=/opt/homecam/venv/bin/uvicorn server:app --host 0.0.0.0 --port 8080
+Restart=always
+RestartSec=3
+[Install]
+WantedBy=multi-user.target

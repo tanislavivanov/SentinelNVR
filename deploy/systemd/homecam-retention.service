@@ -1,0 +1,7 @@
+[Unit]
+Description=SentinelNVR retention cleanup
+[Service]
+Type=oneshot
+User=homecam
+EnvironmentFile=/etc/homecam/env
+ExecStart=/opt/homecam/retention.sh

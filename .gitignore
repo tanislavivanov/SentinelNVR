@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+app/.claude-launch.tmp
+.DS_Store
