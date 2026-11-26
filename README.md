@@ -158,7 +158,7 @@ priorities will shift based on what people actually need.
 **Now: getting it ready for everyone**
 - Open-source release, cleaned of personal setup details
 - Beginner-friendly docs and a clearer install guide
-- Choosing a license
+- License chosen (PolyForm Noncommercial)
 
 **Next: easier setup**
 - One-command install with a guided first-run wizard (camera IP, password, storage, timezone)
@@ -195,4 +195,13 @@ Please never post real passwords, public IPs or camera footage in issues.
 
 ## License
 
-No license has been chosen yet. Until one is added, all rights are reserved by the author.
+SentinelNVR is released under the [PolyForm Noncommercial License 1.0.0](LICENSE).
+
+- **Free to use, modify and fork** for personal, hobby, research, educational and other noncommercial purposes.
+- **Not allowed:** selling it, offering it as a paid product or service, or using it for commercial gain.
+  Want to use it commercially? Open an issue to talk about a separate license.
+- **Attribution required:** if you share it or a fork, keep the `LICENSE` file and the `Required Notice:` line with the
+  link to this repository: <https://github.com/tanislavivanov/SentinelNVR>.
+- **No warranty, no liability:** the software is provided "as is". See the license for details.
+
+Note that this is a "source-available" license, not an OSI-approved open-source license.
